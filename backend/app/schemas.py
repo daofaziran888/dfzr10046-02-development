@@ -29,3 +29,28 @@ class EntryPayload(BaseModel):
 class ActionPayload(BaseModel):
     action: str
     remark: str | None = None
+
+
+class ConfirmCandidatePayload(BaseModel):
+    reviewer: str = Field(..., min_length=1)
+    confirm_time: str = Field(..., min_length=1)
+    dim_name: str | None = None
+
+
+class ReviseCandidatePayload(BaseModel):
+    new_interval_start: str = Field(..., min_length=1)
+    new_interval_end: str = Field(..., min_length=1)
+    change_summary: str = Field(..., min_length=1)
+    notice_time: str = Field(..., min_length=1)
+
+
+class SubmitBatchPayload(BaseModel):
+    candidate_ids: list[int] = Field(..., min_length=1)
+    reviewer: str = Field(..., min_length=1)
+    dim_name: str = Field(..., min_length=1)
+
+
+class DraftPayload(BaseModel):
+    dim_name: str = Field(..., min_length=1)
+    snapshot_date: str = Field(..., min_length=1)
+    operator: str = Field(..., min_length=1)

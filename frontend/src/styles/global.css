@@ -70,3 +70,37 @@ body { margin: 0; background: #f6f8fb; color: #1f2937; }
 .analysis-chart { display: flex; align-items: flex-end; gap: 8px; height: 160px; padding: 12px 0; }
 .analysis-bar { flex: 1; border-radius: 4px 4px 0 0; background: var(--brand); min-width: 24px; position: relative; transition: height 0.4s; }
 .analysis-bar span { position: absolute; bottom: -20px; left: 50%; transform: translateX(-50%); font-size: 10px; color: var(--muted); white-space: nowrap; }
+/* 区间复核对照台 */
+.panel { background: #fff; border: 1px solid var(--border); border-radius: 8px; padding: 14px 16px; margin-bottom: 14px; }
+.panel h3 { margin: 0 0 10px; font-size: 15px; }
+.panel h4 { margin: 14px 0 8px; font-size: 13px; color: #334155; }
+.panel-hint { color: var(--muted); font-size: 12px; margin: 8px 0 0; }
+.dim-picker { display: flex; flex-direction: column; gap: 4px; font-size: 12px; color: var(--muted); }
+.dim-picker select { padding: 6px 10px; border: 1px solid var(--border); border-radius: 6px; font-size: 13px; min-width: 150px; }
+.segment-grid { display: flex; gap: 12px; }
+.segment-card { flex: 1; max-width: 220px; border: 1px solid var(--border); border-radius: 8px; padding: 12px; display: flex; flex-direction: column; gap: 6px; background: #fafbfc; }
+.segment-card[data-status="已签收"] { border-color: #22c55e; background: #f0fdf4; }
+.segment-card[data-status="部分失效"] { border-color: #f59e0b; background: #fffbeb; }
+.segment-name { color: var(--muted); font-size: 12px; }
+.segment-state { font-size: 16px; }
+.tag { display: inline-block; padding: 2px 8px; border-radius: 999px; background: #eef2f7; font-size: 12px; color: #475569; }
+.tag-warn { background: #fef3c7; color: #b45309; }
+.tag-ok { background: #dcfce7; color: #15803d; }
+.tag-hot { background: #e0e7ff; color: #3730a3; }
+.changed-row { background: #f8faff; }
+.stale-row { background: #fff7ed; }
+.muted-text { color: var(--muted); font-size: 12px; }
+.warn-text { color: #b45309; }
+.ok-text { color: #15803d; }
+.interval-cell, .stale-interval { font-family: monospace; font-size: 12px; }
+.stale-interval { color: #b45309; text-decoration: line-through; }
+.signoff-cell { font-size: 12px; }
+.conclusion-cell { font-size: 12px; color: #475569; max-width: 320px; }
+.danger-link { color: #b42318; }
+.submit-bar { display: flex; align-items: center; gap: 12px; margin-top: 12px; padding: 10px 12px; background: #f8fafc; border-radius: 8px; }
+.submit-info { font-size: 13px; display: flex; align-items: center; gap: 6px; }
+.inline-input { padding: 6px 10px; border: 1px solid var(--border); border-radius: 6px; font-size: 13px; }
+.submit-result { font-size: 12px; margin: 8px 0 0; color: #334155; }
+.reject-reason { display: inline-block; margin-left: 8px; color: #b42318; }
+.draft-toolbar { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-bottom: 10px; }
+.btn:disabled, .link:disabled { opacity: 0.55; cursor: not-allowed; }
